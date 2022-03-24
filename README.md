@@ -1,9 +1,13 @@
-# Prerequisite
 
-- **Ask tomo for .env.local file and place it under packages/proved-web/ **
-- **Ask tomo for .env file and place it under packages/contracts/ **
+Demonstrate your DAO contributions on-chain to showcase your credentials.
 
 # Setup
+### Prerequisite
+- This project uses AWS CDK for the backend and AWS Amplify for the frontend hosting. AWS account is required to deploy the service.
+- Setup .env.local file and place it under packages/proved-web/ **
+- Setup .env file and place it under packages/contracts/ **
+
+### Initialize Contract
 
 ```
 yarn install
@@ -13,13 +17,24 @@ yarn install && yarn compile && yarn abi
 cd ../../
 // copies typechain and abi file under cdk stack for web3 lambda layer
 yarn copyContract
+```
+
+### Setup AWS
+**You need to set AWS profile in your local env**
+
+```
+cd packages/cdk
+yarn build && cdk:deploy
+
+// take note of a GraphQL apiId(e.g. `clqm2i3aprdwddgj5q3zjc2uwu`)
+
 cd packages/proved-web
 yarn install
 // Setting up Frontend
 // installs aws-amplify cli globally
 npm install -g @aws-amplify/cli
-$ amplify init --appId d2sndpe29tmpgb
-// Setting up AppSync GraphQL
+$ amplify init
+// Setting up AppSync GraphQL(use the apiId generated above)
 $amplify codegen add --apiId clqm2i3aprdwddgj5q3zjc2uwu
 ```
 
