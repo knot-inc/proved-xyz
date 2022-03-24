@@ -1,0 +1,18 @@
+projects:
+  ProveGraphql-dev:
+    schemaPath: src/graphql/schema.json
+    includes:
+      - src/graphql/**/*.ts
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: typescript
+        generatedFileName: src/API.ts
+        docsFilePath: src/graphql
+        region: us-west-2
+        apiId: clqm2i3aprdwddgj5q3zjc2uwu
+        maxDepth: 3
+extensions:
+  amplify:
+    version: 3

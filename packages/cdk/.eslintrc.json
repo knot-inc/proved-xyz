@@ -1,0 +1,19 @@
+{
+  "plugins": ["@typescript-eslint", "import"],
+  "extends": ["plugin:@typescript-eslint/recommended", "prettier"],
+  "rules": {
+    "import/no-unresolved": "error",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error"
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "project": ["tsconfig.json"]
+      }
+    }
+  }
+}

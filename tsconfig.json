@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "outDir": "./dist",
+    "paths": {
+      "@/abi/*": ["./packages/contracts/abi/*"],
+      "@/artifacts/*": ["./packages/contracts/artifacts/*"],
+      "@/deployments/*": ["./packages/contracts/deployments/*"],
+      "@/typechain/*": ["./packages/contracts/typechain/*"]
+    },
+    "resolveJsonModule": true,
+    "strict": true,
+    "target": "ES2018"
+  },
+  "exclude": ["dist", "node_modules"]
+}

@@ -1,0 +1,77 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.cache": true,
+    "**/.vs/": true,
+    "**/*.cs": true,
+    "**/*.orig": true,
+    "**/bin/": false,
+    "**/build/": true,
+    "**/build/**/*": true,
+    "**/debug/": true,
+    "**/dist/": true,
+    "**/node_modules/": false,
+    "**/obj": true,
+    "node_modules": true,
+    "node_modules/*/**": true,
+    "**/node_modules": true,
+    "yarn-error.log": true,
+    "**/yarn-error.log": true,
+    "packages\\eth-hooks/lib": true,
+    "**/.yalc": true,
+    "packages/cdk/functions/**/*.js": true,
+    "packages/cdk/graphql/**/*.js": true,
+    "packages/cdk/lib/**/*.js": true,
+    "packages/cdk/bin/*.js": true,
+    "packages/cdk/**/*.d.ts": true
+  },
+  "search.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.cache": true,
+    "**/.vs/": true,
+    "**/*.cs": true,
+    "**/*.orig": true,
+    "**/bin/": true,
+    "**/build/": true,
+    "**/build/**/*": true,
+    "**/debug/": true,
+    "**/dist/": true,
+    "**/node_modules/": true,
+    "**/obj": true,
+    "node_modules": true,
+    "node_modules/*/**": true,
+    "**/node_modules": true,
+    "yarn-error.log": true,
+    "**/yarn-error.log": true,
+    "**/.yalc": true
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "solidity.formatter": "prettier", // This is the default so it might be missing.
+  "[solidity]": {
+    "editor.defaultFormatter": "JuanBlanco.solidity"
+  },
+  "solidity.packageDefaultDependenciesDirectory": "node_modules",
+  "solidity.packageDefaultDependenciesContractsDirectory": "",
+  "solidity.linter": "solhint",
+  "solidity.defaultCompiler": "remote",
+  "solidity.compileUsingRemoteVersion": "v0.8.9+commit.e5eed63a",
+  "solidity.enabledAsYouTypeCompilationErrorCheck": true,
+  "solidity.validationDelay": 1500,
+  "eslint.workingDirectories": [
+    { "directory": "packages/contracts", "changeProcessCWD": true },
+    { "directory": "packages/proved-web", "changeProcessCWD": true }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    // to prevent compile error with hardhat.config.ts
+    "strict": false,
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "declaration": true,
+    "noImplicitAny": false,
+    "rootDirs": [
+      "./abi",
+      "./deploy",
+      "./deployments",
+      "./scripts",
+      "./src",
+      "./tests",
+      "./typechain"
+    ]
+  },
+  "exclude": ["node_modules"],
+  "include": ["./scripts", "./test", "./typechain"],
+  "files": ["./hardhat.config.ts"]
+}

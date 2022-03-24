@@ -1,0 +1,14 @@
+.background {
+  width: 700px;
+  height: 500px;
+  background: #fff;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page {
+  font-family: "Space Grotesk", sans-serif;
+}

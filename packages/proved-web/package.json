@@ -1,0 +1,38 @@
+{
+  "name": "proved-web",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.4.2",
+    "@heroicons/react": "^1.0.5",
+    "@rehooks/local-storage": "^2.4.4",
+    "@tailwindcss/forms": "^0.4.0",
+    "aws-amplify": "^4.3.11",
+    "ethers": "^5.5.2",
+    "next": "12.0.7",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-share": "^4.4.0",
+    "wagmi": "^0.0.17"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.7",
+    "@types/react": "17.0.38",
+    "autoprefixer": "^10.4.1",
+    "eslint": "8.6.0",
+    "eslint-config-next": "12.0.7",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.9",
+    "typescript": "4.5.4"
+  }
+}

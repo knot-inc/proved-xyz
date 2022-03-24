@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "commonjs",
+    "lib": ["es2018", "DOM"],
+    "baseUrl": "./",
+    "paths": {
+      "@/appSync": ["graphql/appSync.ts"],
+      "@/graphql": ["graphql/types.ts"],
+      "@/stepTypes": ["types/steps.ts"],
+      "/opt/nodejs/ethers-utils": ["functions/layers/web3/nodejs/ethers-utils"],
+      "/opt/nodejs/contractABIs": ["functions/layers/web3/nodejs/contractABIs"],
+      "/opt/nodejs/chrome-aws-lambda": [
+        "functions/layers/chrome/nodejs/chrome-aws-lambda"
+      ],
+      "/opt/nodejs/ethGasStation": [
+        "functions/layers/web3/nodejs/ethGasStation"
+      ],
+      "/opt/nodejs/calculateGas": ["functions/layers/web3/nodejs/calculateGas"],
+      "/opt/nodejs/secretManager": [
+        "functions/layers/web3/nodejs/secretManager"
+      ],
+      "/opt/nodejs/dynamodb-utils": [
+        "functions/layers/dynamodb/nodejs/dynamodb-utils"
+      ]
+    },
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": false,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "types": ["jest", "node"]
+  },
+  "exclude": ["node_modules", "cdk.out"]
+}

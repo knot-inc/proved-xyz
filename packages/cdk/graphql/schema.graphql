@@ -1,0 +1,128 @@
+type S3Object {
+  bucket: String!
+  key: String!
+  region: String!
+}
+
+type Org {
+  id: ID!
+  name: String!
+  discordIcon: String
+  isOwner: Boolean
+}
+
+type User {
+  id: ID!
+  createdAt: AWSDateTime
+  email: String
+  name: String
+  nonce: String
+  profileImage: S3Object
+  verified: Boolean
+  subscribeMessage: Boolean
+  orgs: [Org]
+}
+
+enum ProvedStatus {
+  CANCELED
+  MINTED
+  PROVED
+  TRIGGERED_MINT
+  CLAIMED_PROPOSAL
+}
+
+type Proof {
+  id: ID!
+  createdAt: AWSDateTime
+  endDate: AWSDateTime
+  org: Org
+  ownerId: ID
+  provers: [User]
+  role: String
+  startDate: AWSDateTime
+  status: ProvedStatus
+  txHash: String
+  nftTxHash: String
+}
+
+type ProofDetail {
+  id: ID!
+  createdAt: AWSDateTime
+  endDate: AWSDateTime
+  org: Org
+  ownerId: ID
+  owner: User
+  provers: [User]
+  role: String
+  startDate: AWSDateTime
+  status: ProvedStatus
+  txHash: String
+  nftTxHash: String
+}
+
+input S3ObjectInput {
+  bucket: String!
+  key: String!
+  region: String!
+}
+
+input ProofCreateInput {
+  org: OrgInput!
+  role: String!
+  ownerId: ID!
+  startDate: AWSDateTime!
+  endDate: AWSDateTime
+}
+
+input UserInput {
+  id: ID!
+  name: String
+}
+
+input ProofUpdateInput {
+  id: ID!
+  org: OrgInput
+  role: String
+  startDate: AWSDateTime
+  endDate: AWSDateTime
+  status: ProvedStatus
+  prover: UserInput
+  txHash: String
+  nftTxHash: String
+}
+
+input OrgInput {
+  id: ID!
+  name: String!
+  discordIcon: String
+  isOwner: Boolean
+}
+
+input UserUpdateInput {
+  id: ID!
+  email: String
+  name: String
+  nonce: String
+  profileImage: S3ObjectInput
+  verified: Boolean
+  subscribeMessage: Boolean
+  orgs: [OrgInput]
+}
+
+type Query {
+  userGet(id: ID!): User
+  proofGet(id: ID!): Proof
+  proofDetailGet(id: ID!): ProofDetail
+  proofList(id: ID!): [Proof]
+}
+
+type Mutation {
+  proofCreate(input: ProofCreateInput!): Proof @aws_iam
+  proofUpdate(input: ProofUpdateInput!): Proof @aws_iam
+  userUpdate(input: UserUpdateInput!): User @aws_iam
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}

@@ -1,0 +1,10 @@
+{
+  "name": "gen-image",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.89"
+  },
+  "dependencies": {}
+}
