@@ -1,5 +1,5 @@
 
-Demonstrate your DAO contributions on-chain to showcase your credentials.
+Demonstrate your DAO contributions on-chain to showcase your credentials. https://www.proved.xyz/
 
 # Setup
 ### Prerequisite
