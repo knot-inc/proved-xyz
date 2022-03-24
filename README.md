@@ -1,6 +1,11 @@
 
 Demonstrate your DAO contributions on-chain to showcase your credentials. https://www.proved.xyz/
 
+
+<img src="packages/proved-web/public/proved-ogp.jpeg" width=450 />
+
+
+
 # Setup
 ### Prerequisite
 - This project uses AWS CDK for the backend and AWS Amplify for the frontend hosting. AWS account is required to deploy the service.
